@@ -1,0 +1,51 @@
+@import "app";
+/* Some Resets */
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+  padding: 0;
+}
+/* HTML Styles Start Here */
+html {
+  font-size: 10px;
+  @include normal-screen {
+    font-size: 12px;
+  }
+  @include large-screen {
+    font-size: 14px;
+  }
+  @include xlarge-screen {
+    font-size: 16px;
+  }
+}
+/* Body Styles Start Here */
+body {
+  min-width: 320px;
+  overflow: hidden;
+  line-height: 1.5;
+  font-family: $primary-font;
+  &.rtl {
+    direction: rtl;
+    text-align: right;
+  }
+}
+/* App Main Layout Styles Start Here */
+.layout {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    overflow-y: auto;
+    section {
+      flex-grow: 1;
+      padding: 30px 0;
+      @include large-screen {
+        padding: 75px 0;
+      }
+    }
+  }
+}

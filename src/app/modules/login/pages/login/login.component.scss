@@ -1,0 +1,159 @@
+@import "styles/app";
+/* Login Page Styles Start Here */
+.login-page {
+  width: 100vw;
+  height: 100vh;
+  background-color: $layout-light;
+  @include normal-screen {
+    padding: 50px 60px;
+  }
+  @include large-screen {
+    padding: 60px 70px;
+  }
+  @include xlarge-screen {
+    padding: 80px 95px;
+  }
+  .login-box {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    background-color: $layout-light;
+    .login-banner {
+      display: none;
+      @include large-screen {
+        width: 45%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 80px;
+        background-color: $layout-medium;
+      }
+      @include xlarge-screen {
+        padding: 120px;
+      }
+    }
+    .login-area {
+      width: 100%;
+      padding: 30px;
+      @include small-screen {
+        padding: 50px 65px;
+      }
+      background-color: $primary;
+      @include medium-screen {
+        padding: 70px 100px;
+      }
+      @include normal-screen {
+        padding: 40px 90px;
+      }
+      @include large-screen {
+        width: 55%;
+        padding: 40px 120px;
+      }
+      @include xlarge-screen {
+        padding: 100px 200px;
+      }
+      .login-form-wrapper {
+        height: 100%;
+        padding: 50px 35px;
+        background-color: $layout-light;
+        @include medium-screen {
+          padding: 70px 100px;
+        }
+        @include normal-screen {
+          padding: 35px 160px;
+        }
+        @include large-screen {
+          padding: 25px 50px;
+        }
+        @include xlarge-screen {
+          padding: 60px 75px;
+        }
+        .form-header {
+          margin-bottom: 25px;
+          .login-title {
+            margin: 30px 0 10px;
+            font-size: 2rem;
+            @include medium-screen {
+              margin: 30px 0 15px;
+              font-size: 3rem;
+            }
+            @include normal-screen {
+              margin: 20px 0 10px;
+              font-size: 1.7rem;
+            }
+            @include large-screen {
+              margin: 15px 0 5px;
+              font-size: 1.7rem;
+            }
+            @include xlarge-screen {
+              margin: 30px 0 15px;
+            }
+          }
+          .login-subtitle {
+            font-size: 1rem;
+            @include medium-screen {
+              font-size: 1.6rem;
+            }
+            @include normal-screen {
+              font-size: 1.1rem;
+            }
+            @include large-screen {
+              font-size: 1rem;
+            }
+          }
+        }
+        .login-form {
+          margin-bottom: 30px;
+          .apply {
+            margin-top: 15px;
+          }
+        }
+        .user-actions {
+          position: relative;
+          .link {
+            color: $primary;
+            text-decoration: none;
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+          .forget-password {
+            margin-bottom: 10px;
+          }
+          .change-lang {
+            position: absolute;
+            top: 0;
+            right: 0;
+          }
+          .sign-up {
+            .question {
+              margin-right: 5px;
+            }
+          }
+        }
+      }
+    }
+  }
+  /* Arabic Styles Start Here */
+  &.rtl {
+    .login-box {
+      .login-area {
+        .login-form-wrapper {
+          .user-actions {
+            .change-lang {
+              direction: ltr;
+              right: auto;
+              left: 0;
+            }
+            .sign-up {
+              .question {
+                margin-right: 0;
+                margin-left: 5px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

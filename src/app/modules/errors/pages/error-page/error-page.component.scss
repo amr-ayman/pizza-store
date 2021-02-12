@@ -1,0 +1,59 @@
+@import "styles/app";
+/* Error Pages Styles Start Here */
+.error-page {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &:before{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: $primary;
+    z-index: 1;
+  }
+  .content {
+    min-width: 310px;
+    z-index: 2;
+    max-width: 320px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    @include normal-screen {
+      max-width: 450px;
+    }
+    .error-number {
+      color: #fff;
+      font-size: 70px;
+      font-weight: bold;
+      margin-bottom: 15px;
+      font-family: $primary-font;
+    }
+    .error-title {
+      color: #fff;
+      font-size: 30px;
+      margin-bottom: 15px;
+      font-family: $primary-font;
+    }
+    .error-message {
+      color: #fff;
+      font-size: 20px;
+      line-height: 25px;
+      margin-bottom: 50px;
+    }
+    .option-btns {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      .bzbo-btn {
+        padding: 15px;
+        min-width: 100px;
+        margin: 10px;
+      }
+    }
+  }
+}

@@ -1,0 +1,75 @@
+@import "styles/app";
+/* HSC Modal Styles Start Here */
+.modal {
+  top: 70px;
+  max-height: calc(100% - 70px);
+  @include small-screen {
+    .modal-sm {
+      max-width: 34vw;
+    }
+    .modal-md {
+      max-width: 45vw;
+    }
+    .modal-lg {
+      max-width: 60vw;
+    }
+    .modal-xl {
+      max-width: 90vw;
+    }
+  }
+  .modal-md {
+    @include small-screen {
+      max-width: max-content;
+    }
+  }
+  .modal-dialog {
+    .modal-content {
+      hsc-modal {
+        height: 100%;
+      }
+      .modal-header {
+        color: $white;
+        border-bottom: none;
+        background-color: $primary;
+        .header-wrapper {
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          .modal-close {
+            &.icon {
+              color: $white;
+              font-size: 14px;
+              &:hover {
+                cursor: pointer;
+                color: $gray-light;
+              }
+            }
+          }
+        }
+      }
+      .modal-body {
+        min-height: 100px;
+        padding: 25px 15px;
+        .attach {
+          height: 4.5rem;
+          border-radius: 8px;
+          margin-bottom: .5rem;
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+      .modal-footer {
+        background-color: $layout-light;
+        .confirmation-wrapper {
+          width: 230px;
+          margin: 0 auto;
+          display: flex;
+          justify-content: space-between;
+        }
+      }
+    }
+  }
+}
+

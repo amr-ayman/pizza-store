@@ -1,0 +1,100 @@
+<div class="store-page" setRtl>
+  <div class="product-view" *ngIf="productDetails">
+    <div class="row">
+      <div class="col-md-6">
+        <img [src]="productDetails.image" [alt]="productDetails.nameEn" class="img-fluid">
+      </div>
+      <div class="col-md-6">
+        <h2 class="product-title">{{isArabic ? productDetails.nameAr : productDetails.nameEn}}</h2>
+        <p class="product-description">{{isArabic ? productDetails.descriptionAr : productDetails.descriptionEn}}</p>
+        <p class="product-code">{{'ADMIN.ITEM.PRODUCT_CODE' | translate}}: {{productDetails.code}}</p>
+        <p class="product-quantity">{{productDetails.quantity}} {{'ADMIN.ITEM.PRODUCT_QUANTITY' | translate}}</p>
+        <p class="product-price">{{productDetails.price}} {{'ADMIN.ITEM.PRODUCT_PRICE' | translate}}</p>
+      </div>
+    </div>
+    <div class="back-to-list">
+      <a href="javascript:" class="pizza-btn small accept" routerLink="/admin/products">{{'ADMIN.ITEM.BACK_TO_LIST' | translate}}</a>
+    </div>
+  </div>
+  <div class="create-product" *ngIf="!viewMode">
+    <h2 class="new-product">{{'ADMIN.ITEM.NEW_PRODUCT' | translate}}</h2>
+    <form class="product-form" [formGroup]="productForm" (ngSubmit)="createNewProduct()">
+      <div class="row">
+        <div class="col-sm-12 col-md-6">
+          <div class="name-en">
+            <pizza-store-input-text [formControlName]="'nameEn'" [type]="'text'"
+                                    [placeholder]="'ADMIN.ITEM.NAME_EN' | translate"
+                                    [formControl]="formControlData('nameEn')"
+                                    [errorMessages]="errorMessages"></pizza-store-input-text>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-6">
+          <div class="name-ar">
+            <pizza-store-input-text [formControlName]="'nameAr'" [type]="'text'"
+                                    [placeholder]="'ADMIN.ITEM.NAME_AR' | translate"
+                                    [formControl]="formControlData('nameAr')"
+                                    [errorMessages]="errorMessages"></pizza-store-input-text>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12 col-md-6">
+          <div class="description-en">
+            <pizza-store-input-text [formControlName]="'descriptionEn'" [type]="'textarea'"
+                              [placeholder]="'ADMIN.ITEM.DESCRIPTION_EN' | translate"
+                              [formControl]="formControlData('descriptionEn')"
+                              [errorMessages]="errorMessages"></pizza-store-input-text>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-6">
+          <div class="description-ar">
+            <pizza-store-input-text [formControlName]="'descriptionAr'" [type]="'textarea'"
+                              [placeholder]="'ADMIN.ITEM.DESCRIPTION_AR' | translate"
+                              [formControl]="formControlData('descriptionAr')"
+                              [errorMessages]="errorMessages"></pizza-store-input-text>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12 col-md-6">
+          <div class="code">
+            <pizza-store-input-text [formControlName]="'code'" [type]="'text'"
+                              [placeholder]="'ADMIN.ITEM.CODE' | translate"
+                              [formControl]="formControlData('code')"
+                              [errorMessages]="errorMessages"></pizza-store-input-text>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-6">
+          <div class="price">
+            <pizza-store-input-number [formControlName]="'price'" [min]="50" [max]="300"
+                              [placeholder]="'ADMIN.ITEM.PRICE' | translate"
+                              [formControl]="formControlData('price')"
+                              [errorMessages]="errorMessages"></pizza-store-input-number>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12 col-md-6">
+          <div class="quantity">
+            <pizza-store-input-number [formControlName]="'quantity'" [min]="1" [max]="50"
+                                [placeholder]="'ADMIN.ITEM.QUANTITY' | translate"
+                                [formControl]="formControlData('quantity')"
+                                [errorMessages]="errorMessages"></pizza-store-input-number>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-6">
+          <div class="image">
+            <pizza-store-input-file [formControlName]="'image'"
+                              [placeholder]="'ADMIN.ITEM.IMAGE' | translate"
+                              [formControl]="formControlData('image')"
+                              [errorMessages]="errorMessages"></pizza-store-input-file>
+          </div>
+        </div>
+      </div>
+      <div class="form-actions">
+        <button type="submit" class="pizza-btn small accept" routerLink="/admin/products">{{'ACTIONS.CANCEL' | translate}}</button>
+        <button type="submit" class="pizza-btn small submit">{{'ACTIONS.SAVE' | translate}}</button>
+      </div>
+    </form>
+  </div>
+</div>

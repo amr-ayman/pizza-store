@@ -1,0 +1,82 @@
+{
+  "count": 7,
+  "items": [
+    {
+      "id": 1,
+      "nameEn": "Pizza Type 1",
+      "nameAr": "نوع البيتزا 1",
+      "descriptionEn": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+      "descriptionAr": "لوريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا يسكينج أليايت,سيت دو أيوسمود تيمبور\n\nأنكايديديونتيوت لابوري ات دولار ماجنا أليكيوا . يوت انيم أد مينيم فينايم,كيواس نوستريد\n\nأكسير سيتاشن يللأمكو لابورأس نيسي يت",
+      "code": "PC-001",
+      "price": 70,
+      "quantity": 11,
+      "image": "assets/images/image-placeholder.jpg"
+    },
+    {
+      "id": 2,
+      "nameEn": "Pizza Type 2",
+      "nameAr": "نوع البيتزا 2",
+      "descriptionEn": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+      "descriptionAr": "لوريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا يسكينج أليايت,سيت دو أيوسمود تيمبور\n\nأنكايديديونتيوت لابوري ات دولار ماجنا أليكيوا . يوت انيم أد مينيم فينايم,كيواس نوستريد\n\nأكسير سيتاشن يللأمكو لابورأس نيسي يت",
+      "code": "PC-002",
+      "price": 75,
+      "quantity": 12,
+      "image": "assets/images/image-placeholder.jpg"
+    },
+    {
+      "id": 3,
+      "nameEn": "Pizza Type 3",
+      "nameAr": "نوع البيتزا 3",
+      "descriptionEn": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+      "descriptionAr": "لوريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا يسكينج أليايت,سيت دو أيوسمود تيمبور\n\nأنكايديديونتيوت لابوري ات دولار ماجنا أليكيوا . يوت انيم أد مينيم فينايم,كيواس نوستريد\n\nأكسير سيتاشن يللأمكو لابورأس نيسي يت",
+      "code": "PC-003",
+      "price": 80,
+      "quantity": 13,
+      "image": "assets/images/image-placeholder.jpg"
+    },
+    {
+      "id": 4,
+      "nameEn": "Pizza Type 4",
+      "nameAr": "نوع البيتزا 4",
+      "descriptionEn": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+      "descriptionAr": "لوريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا يسكينج أليايت,سيت دو أيوسمود تيمبور\n\nأنكايديديونتيوت لابوري ات دولار ماجنا أليكيوا . يوت انيم أد مينيم فينايم,كيواس نوستريد\n\nأكسير سيتاشن يللأمكو لابورأس نيسي يت",
+      "code": "PC-004",
+      "price": 85,
+      "quantity": 14,
+      "image": "assets/images/image-placeholder.jpg"
+    },
+    {
+      "id": 5,
+      "nameEn": "Pizza Type 5",
+      "nameAr": "نوع البيتزا 5",
+      "descriptionEn": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+      "descriptionAr": "لوريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا يسكينج أليايت,سيت دو أيوسمود تيمبور\n\nأنكايديديونتيوت لابوري ات دولار ماجنا أليكيوا . يوت انيم أد مينيم فينايم,كيواس نوستريد\n\nأكسير سيتاشن يللأمكو لابورأس نيسي يت",
+      "code": "PC-005",
+      "price": 90,
+      "quantity": 15,
+      "image": "assets/images/image-placeholder.jpg"
+    },
+    {
+      "id": 6,
+      "nameEn": "Pizza Type 6",
+      "nameAr": "نوع البيتزا 6",
+      "descriptionEn": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+      "descriptionAr": "لوريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا يسكينج أليايت,سيت دو أيوسمود تيمبور\n\nأنكايديديونتيوت لابوري ات دولار ماجنا أليكيوا . يوت انيم أد مينيم فينايم,كيواس نوستريد\n\nأكسير سيتاشن يللأمكو لابورأس نيسي يت",
+      "code": "PC-006",
+      "price": 95,
+      "quantity": 16,
+      "image": "assets/images/image-placeholder.jpg"
+    },
+    {
+      "id": 7,
+      "nameEn": "Pizza Type 7",
+      "nameAr": "نوع البيتزا 7",
+      "descriptionEn": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+      "descriptionAr": "لوريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا يسكينج أليايت,سيت دو أيوسمود تيمبور\n\nأنكايديديونتيوت لابوري ات دولار ماجنا أليكيوا . يوت انيم أد مينيم فينايم,كيواس نوستريد\n\nأكسير سيتاشن يللأمكو لابورأس نيسي يت",
+      "code": "PC-007",
+      "price": 100,
+      "quantity": 17,
+      "image": "assets/images/image-placeholder.jpg"
+    }
+  ]
+}

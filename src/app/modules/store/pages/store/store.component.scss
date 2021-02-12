@@ -1,0 +1,36 @@
+@import "styles/app";
+/* Store Products Styles Start Here */
+.store-page {
+  .product-list-title {
+    margin-bottom: 20px;
+  }
+  .product {
+    margin-top: 50px;
+    background-color: $border;
+    .product-details {
+      padding: 20px 15px 15px;
+      .product-title {
+        margin-bottom: 30px;
+        font-weight: 700;
+      }
+      .product-content {
+        font-size: 1.2rem;
+      }
+    }
+    .product-actions {
+      width: 50%;
+      padding-bottom: 30px;
+      margin: 30px auto 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .action {
+        font-size: 2.5rem;
+        color: $error;
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

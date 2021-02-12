@@ -1,0 +1,16 @@
+<div class="form-group file" [class.disabled]="disabled" setRtl>
+  <label *ngIf="label" class="form-control-label" [for]="formControlName">{{ label | translate}}</label>
+  <input [id]="formControlName" class="form-control" type="file" [accept]="acceptedFiles" [disabled]="disabled"
+         [(ngModel)]="value" (input)="upload($event)" (blur)="onTouched($event)" [multiple]="false"
+         [class.has-error]="(formControl.touched || formControl.dirty) && !formControl.valid">
+  <div class="upload-area">
+    <div class="upload-loading" *ngIf="isUploading">
+      <span class="uploading">{{'ACTIONS.UPLOAD_IN_PROGRESS' | translate}}</span>
+      <span class="dots"><span class="dot-loader"></span><span class="dot-loader"></span><span class="dot-loader"></span></span>
+    </div>
+    <div class="upload-message">{{filesName ? filesName : (placeholder | translate)}}</div>
+  </div>
+  <div class="error-message" *ngIf="(formControl.touched || formControl.dirty) && !formControl.valid">
+    <span class="message" *ngIf="formControl.errors?.required">{{errorMessages[formControlName].required | translate}}</span>
+  </div>
+</div>

@@ -1,0 +1,137 @@
+{
+  "LOGIN": {
+    "SIGN_IN": "Sign In",
+    "ACCESS": "Access Pizza Store Using Username & Password",
+    "USERNAME": "Username",
+    "PASSWORD": "Password",
+    "LOGIN": "Login",
+    "LOGGING": "Logging...",
+    "FORGET_PASSWORD": "forget password ?",
+    "OTHER_LANG": "العربية ؟",
+    "DONT_HAVE_ACCOUNT": "Don't have any account?",
+    "CREATE_ONE": "Create one!"
+  },
+  "HEADER_FOOTER": {
+    "WELCOME": "Welcome,",
+    "LANG": "عربى",
+    "LOGOUT": "Log out",
+    "APP_VERSION": "Version",
+    "COPYRIGHTS": "© 2021 Pizza Store | All Rights Reserved"
+  },
+  "MENU": {
+    "STORE": "Store",
+    "ADMIN": "Admin",
+    "CUSTOMER": "Customer"
+  },
+  "ADMIN": {
+    "LIST": {
+      "TITLE": "Product List",
+      "ADD_PRODUCT": "Add Product",
+      "IMAGE": "Image",
+      "NAME": "Name",
+      "DESCRIPTION": "Description",
+      "CODE": "Code",
+      "PRICE": "Price",
+      "QUANTITY": "Quantity",
+      "DELETE_PRODUCT": "Delete Product",
+      "DELETE_CONFIRMATION": "Are you want to delete this item?"
+    },
+    "ITEM": {
+      "PRODUCT_CODE": "Product Code",
+      "PRODUCT_QUANTITY": "In Stock",
+      "PRODUCT_PRICE": "LE / Item",
+      "BACK_TO_LIST": "Back to list",
+      "NEW_PRODUCT": "Add New Product",
+      "NAME_EN": "Product Name ( English )",
+      "NAME_AR": "Product Name ( Arabic )",
+      "DESCRIPTION_EN": "Description ( English )",
+      "DESCRIPTION_AR": "Description ( Arabic )",
+      "CODE": "Code",
+      "PRICE": "Price",
+      "QUANTITY": "Quantity",
+      "IMAGE": "Image"
+    }
+  },
+  "STORE": {
+    "TITLE": "Available Products",
+    "NOT_AVAILABLE": "Not Available"
+  },
+  "CART": {
+    "EMPTY": "Sorry, your cart is empty. Try add some products.",
+    "GO_TO_LIST": "Go to list",
+    "COUNT": "Count",
+    "ITEMS": "Items",
+    "PRODUCTS_PRICE": "LE / Total",
+    "CHECKOUT": "Checkout"
+  },
+  "ACTIONS": {
+    "ADD": "Add",
+    "VIEW": "View",
+    "EDIT": "Edit",
+    "DELETE": "Delete",
+    "SAVE": "Save",
+    "CANCEL": "Cancel",
+    "NO_KEEP_IT": "No keep it",
+    "CONFIRM": "Confirm",
+    "DISCARD": "Discard",
+    "UPLOAD_IN_PROGRESS": "Uploading..."
+  },
+  "ERROR_PAGES": {
+    "HOME": "Home",
+    "BACK": "Back",
+    "SORRY": "Sorry!",
+    "FORBIDDEN": "Access Denied",
+    "NO_PERMISSION": "You don’t have access to this page. Please contact support if this is not supposed to happen.",
+    "NOT_FOUND": "Page Not Found",
+    "WE_HELP": "The page that you are trying to access does not exist.",
+    "SERVER_ERROR": "Internal process engine error",
+    "WRONG_SERVER": "Please try again in a few minutes.",
+    "TRY_AGAIN": "Try again"
+  },
+  "VALIDATION_MESSAGES": {
+    "LOGIN": {
+      "USERNAME_REQUIRED": "Username is required",
+      "USERNAME_NOT_VALID": "Please write valid username",
+      "PASSWORD_REQUIRED": "Password is required",
+      "PASSWORD_NOT_VALID": "Please write valid password"
+    },
+    "PRODUCT": {
+      "NAME_EN": "Please write English product name",
+      "NAME_AR": "Please write English Arabic name",
+      "DESCRIPTION_EN": "Please write English product name",
+      "DESCRIPTION_AR": "Please write Arabic product name",
+      "CODE": "Please write product code",
+      "PRICE": "Please enter product price",
+      "QUANTITY": "Please enter product quantity",
+      "IMAGE": "Please upload product image",
+      "ENGLISH_ONLY": "Only English characters allowed",
+      "ARABIC_ONLY": "Only Arabic characters allowed",
+      "CODE_INVALID": "Please write between 5 & 15 characters",
+      "PRICE_INVALID": "Please insert between 50 & 300",
+      "QUANTITY_INVALID": "Please insert between 1 & 50"
+    }
+  },
+  "TOASTER": {
+    "INFO": "Info",
+    "SUCCESS": "Success",
+    "WARNING": "Warning",
+    "ERROR": "Error",
+    "INFO_MESSAGE": "Just for your information.",
+    "SUCCESS_MESSAGE": "Operation successfully completed.",
+    "WARNING_MESSAGE": "Warning regarding your operation.",
+    "ERROR_MESSAGE": "An error occurred while performing your operation.",
+    "SERVER_ERROR": "Internal Server Error, Try Again Later",
+    "LOGIN": {
+      "VALID": "Successfully Logged In",
+      "INVALID": "Invalid Username Or Password"
+    },
+    "ADMIN": {
+      "ADD_SUCCESS": "Product Added Successfully",
+      "EDIT_SUCCESS": "Product Updated Successfully",
+      "DELETE_SUCCESS": "Product Deleted Successfully"
+    },
+    "CART": {
+      "CHECKOUT": "Thank you for shopping with us."
+    }
+  }
+}

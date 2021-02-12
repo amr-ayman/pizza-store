@@ -1,0 +1,138 @@
+@import "styles/app";
+/* App Header Styles Start Here */
+header {
+  padding: 15px 0;
+  background-color: $layout-medium;
+  box-shadow: 1px 1px 10px 2px rgba($layout-dark, 0.15);
+  .navbar {
+    .navbar-brand {
+      width: 100px;
+      @include medium-screen {
+        width: auto;
+        margin-right: 3rem;
+      }
+    }
+    .navbar-toggler {
+      &:focus {
+        outline: none;
+      }
+      .navbar-toggler-icon {
+        .icon {
+          font-size: 2rem;
+        }
+      }
+    }
+    .navbar-collapse {
+      padding: 15px 0;
+      @include medium-screen {
+        padding: 0;
+      }
+      .navbar-nav {
+        padding: 0;
+        .nav-item {
+          .nav-link {
+            color: $primary;
+            padding: 10px 15px;
+            font-size: 1.3rem;
+            font-weight: 700;
+            &.active {
+              color: $highlight;
+            }
+          }
+        }
+      }
+    }
+    .cart {
+      color: $primary;
+      font-size: 2rem;
+      margin-left: 20px;
+      margin-top: 20px;
+      display: inline-block;
+      @include medium-screen {
+        margin-top: 0;
+        margin-left: auto;
+      }
+      &:hover {
+        text-decoration: none;
+      }
+      .icon {
+        position: relative;
+        &:after {
+          content: attr(data-number);
+          position: absolute;
+          width: 20px;
+          height: 20px;
+          top: -18px;
+          right: 4px;
+          padding: 1px;
+          color: $layout-light;
+          font-size: 0.7rem;
+          background-color: $error;
+          border-radius: 50%;
+          box-sizing: content-box;
+          font-family: Arial, serif;
+          font-weight: bold;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+    }
+    .greeting {
+      margin: 20px;
+      @include medium-screen {
+        margin: 0 20px 0 45px;
+      }
+      font-size: 1.3rem;
+      font-weight: 700;
+    }
+    .logout {
+      display: flex;
+      align-items: center;
+      padding: 10px 15px;
+      color: $primary;
+      font-size: 1.3rem;
+      font-weight: 700;
+      text-decoration: none;
+      .icon {
+        margin-right: 10px;
+      }
+    }
+  }
+  /* App Header Arabic Styles Start Here */
+  &.rtl {
+    .navbar {
+      .navbar-brand {
+        @include medium-screen {
+          margin-right: 0;
+          margin-left: 3rem;
+        }
+      }
+      .cart {
+        margin-left: 0;
+        margin-right: 20px;
+        @include medium-screen {
+          margin-top: 0;
+          margin-right: auto;
+        }
+        .icon {
+          &:after {
+            right: auto;
+            left: 4px;
+          }
+        }
+      }
+      .greeting {
+        @include medium-screen {
+          margin: 0 45px 0 20px;
+        }
+      }
+      .logout {
+        .icon {
+          margin-right: 0;
+          margin-left: 10px;
+        }
+      }
+    }
+  }
+}

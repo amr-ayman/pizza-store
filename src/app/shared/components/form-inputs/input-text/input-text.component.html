@@ -1,0 +1,25 @@
+<div class="form-group" setRtl [class.field-icon]="fieldIcon">
+  <label *ngIf="label" class="form-control-label" [for]="formControlName">{{label}}</label>
+  <span *ngIf="fieldIcon" class="field-icon">
+    <i [class]="fieldIcon"></i>
+  </span>
+  <span *ngIf="formControlName === 'password' && formControl.value" class="password-toggle" (click)="fieldAction()">
+    <i *ngIf="!showPassword" class="ps-show"></i>
+    <i *ngIf="showPassword" class="ps-hide"></i>
+  </span>
+  <input *ngIf="type !== 'textarea'" [id]="formControlName" class="form-control"
+         [class.disabled]="disabled" [(ngModel)]="value"
+         [type]="type" [placeholder]="placeholder"
+         (input)="onChange($event.target.value)" (blur)="onTouched($event)"
+         [class.has-error]="(formControl.touched || formControl.dirty) && !formControl.valid">
+  <textarea *ngIf="type === 'textarea'" [id]="formControlName" class="form-control textarea" [placeholder]="placeholder | translate" [(ngModel)]="value"
+            (input)="onChange($event.target.value)" (blur)="onTouched($event)" [disabled]="disabled"
+            [class.has-error]="(formControl.touched || formControl.dirty) && !formControl.valid"></textarea>
+  <div class="error-message" *ngIf="(formControl.touched || formControl.dirty) && !formControl.valid">
+    <span class="message" *ngIf="formControl.errors?.required">{{errorMessages[formControlName]?.required | translate}}</span>
+    <span class="message" *ngIf="formControl.errors?.minlength">{{errorMessages[formControlName]?.min | translate}}</span>
+    <span class="message" *ngIf="formControl.errors?.maxlength">{{errorMessages[formControlName]?.max | translate}}</span>
+    <span class="message" *ngIf="formControl.errors?.notEnglish">{{errorMessages[formControlName]?.notEnglish | translate}}</span>
+    <span class="message" *ngIf="formControl.errors?.notArabic">{{errorMessages[formControlName]?.notArabic | translate}}</span>
+  </div>
+</div>

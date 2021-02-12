@@ -1,0 +1,107 @@
+@import "app";
+/* Pizza Store Toastr Styles Start Here */
+.toast-container {
+  max-width: 500px;
+  min-width: 270px;
+  display: flex;
+  top: 30px;
+  right: 20px;
+  border-radius: 8px 0 0 8px;
+  @include medium-screen {
+    min-width: 300px;
+    top: 50px;
+    right: 50px;
+  }
+  @include large-screen {
+    top: 120px;
+  }
+  .ngx-toastr {
+    width: 100%;
+    border-radius: 8px;
+    position: relative;
+    background-image: none;
+    margin-bottom: 0;
+    padding: 15px 15px 15px 85px;
+    box-shadow: 5px 5px 3px 3px rgba(0, 0, 0, 0.5);
+    &::before {
+      content: '';
+      font-size: 2rem;
+      font-family: Pizza-Store, serif;
+      color: $layout-light;
+      display: flex;
+      width: 72px;
+      height: 63px;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      top: 0;
+      left: 0;
+      border-radius: 8px 0 0 8px;
+      @include normal-screen {
+        height: 68px;
+      }
+      @include large-screen {
+        height: 75px;
+      }
+      @include xlarge-screen {
+        height: 80px;
+      }
+    }
+    &.toast-info {
+      background-color: $layout-light;
+      &::before {
+        content: '\e907';
+        background-color: $info;
+      }
+    }
+    &.toast-success {
+      background-color: $layout-light;
+      &::before {
+        content: '\e90b';
+        background-color: $success;
+      }
+    }
+    &.toast-warning {
+      background-color: $layout-light;
+      &::before {
+        content: '\e90d';
+        background-color: $warning;
+      }
+    }
+    &.toast-error {
+      background-color: $layout-light;
+      &::before {
+        content: '\e905';
+        background-color: $error;
+      }
+    }
+    .toast-close-button {
+      float: none;
+      position: absolute;
+      top: 5px;
+      right: 5px;
+      .ng-tns-c14-4 {
+        display: none;
+      }
+      span{
+        display: none !important;
+      }
+      &:before {
+        content: '\e903';
+        font-size: 12px;
+        color: $layout-dark;
+        padding: 0 10px;
+        font-family: Pizza-Store, serif;
+      }
+    }
+    .toast-title, .toast-message {
+      color: $layout-dark;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+    .toast-title {
+      font-weight: bold;
+    }
+  }
+}

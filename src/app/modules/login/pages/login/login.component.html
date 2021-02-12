@@ -1,0 +1,43 @@
+<div class="login-page" setRtl>
+  <div class="login-box">
+    <div class="login-banner">
+      <img src="assets/images/login-banner.jpg" alt="Pizza Store Login Banner" class="img-fluid">
+    </div>
+    <div class="login-area">
+      <div class="login-form-wrapper">
+        <div class="form-header">
+          <h1 class="login-title">{{'LOGIN.SIGN_IN' | translate}}</h1>
+          <p class="login-subtitle">{{'LOGIN.ACCESS' | translate}}</p>
+        </div>
+        <form class="login-form" [formGroup]="loginForm" (ngSubmit)="login()">
+          <div class="login-field">
+            <pizza-store-input-text [formControlName]="'username'" [type]="'text'"
+                              [placeholder]="'LOGIN.USERNAME' | translate" [fieldIcon]="'ps-user'"
+                              [formControl]="formControlData('username')"
+                              [errorMessages]="errorMessages"></pizza-store-input-text>
+          </div>
+          <div class="login-field">
+            <pizza-store-input-text [formControlName]="'password'" [type]="'password'"
+                              [placeholder]="'LOGIN.PASSWORD' | translate" [fieldIcon]="'ps-password'"
+                              [formControl]="formControlData('password')"
+                              [errorMessages]="errorMessages"></pizza-store-input-text>
+          </div>
+          <button type="submit" class="pizza-btn large apply"
+                  [disabled]="loggingInProgress">{{loggingInProgress ? ('LOGIN.LOGGING' | translate) : ('LOGIN.LOGIN' | translate)}}</button>
+        </form>
+        <div class="user-actions">
+          <div class="forget-password">
+            <a href="javascript:" class="link" (click)="forgetPassword()">{{'LOGIN.FORGET_PASSWORD' | translate}}</a>
+          </div>
+          <div class="change-lang">
+            <a href="javascript:" class="link" (click)="changeLang()">{{'LOGIN.OTHER_LANG' | translate}}</a>
+          </div>
+          <div class="sign-up">
+            <span class="question">{{'LOGIN.DONT_HAVE_ACCOUNT' | translate}}</span>
+            <a href="javascript:" class="link" (click)="signUp()">{{'LOGIN.CREATE_ONE' | translate}}</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,137 @@
+{
+  "LOGIN": {
+    "SIGN_IN": "تسجيل الدخول",
+    "ACCESS": "أستخدم متجر البيتزا بواسطه أسم المستخدم وكلمة المرور",
+    "USERNAME": "اسم المستخدم",
+    "PASSWORD": "كلمة المرور",
+    "LOGIN": "تسجيل الدخول",
+    "LOGGING": "جارى تسجيل الدخول...",
+    "FORGET_PASSWORD": "نسيت كلمة المرور ؟",
+    "OTHER_LANG": "English ?",
+    "DONT_HAVE_ACCOUNT": "ليس لديك حساب؟",
+    "CREATE_ONE": "تسجيل واحد!"
+  },
+  "HEADER_FOOTER": {
+    "WELCOME": "مرحبا،",
+    "LANG": "English",
+    "LOGOUT": "تسجيل الخروج",
+    "APP_VERSION": "الإصدار",
+    "COPYRIGHTS": "© 2021 متجر البيتزا | جميع الحقوق محفوظة"
+  },
+  "MENU": {
+    "STORE": "المتجر",
+    "ADMIN": "المدير",
+    "CUSTOMER": "الزائر"
+  },
+  "ADMIN": {
+    "LIST": {
+      "TITLE": "قائمة المنتجات",
+      "ADD_PRODUCT": "أضافة منتج",
+      "IMAGE": "الصورة",
+      "NAME": "الأسم",
+      "DESCRIPTIONS": "الوصف",
+      "CODE": "الكود",
+      "PRICE": "السعر",
+      "QUANTITY": "الكمية",
+      "DELETE_PRODUCT": "حذف منتج",
+      "DELETE_CONFIRMATION": "هل تود حذف هذا المنتج؟"
+    },
+    "ITEM": {
+      "PRODUCT_CODE": "كود المنتج",
+      "PRODUCT_QUANTITY": "متوفر",
+      "PRODUCT_PRICE": "جم / للوحدة",
+      "BACK_TO_LIST": "الرجوع للقائمة",
+      "NEW_PRODUCT": "أضافة منتج جديد",
+      "NAME_EN": "أسم المنتج (الأنجليزية)",
+      "NAME_AR": "أسم المنتج (العربية)",
+      "DESCRIPTION_EN": "وصف المنتج (الأنجليزية)",
+      "DESCRIPTION_AR": "وصف المنتج (العربية)",
+      "CODE": "الكود",
+      "PRICE": "السعر",
+      "QUANTITY": "الكمية",
+      "IMAGE": "صورة المنتج"
+    }
+  },
+  "STORE": {
+    "TITLE": "المنتجات المتاحة",
+    "NOT_AVAILABLE": "غير متوفر"
+  },
+  "CART": {
+    "EMPTY": "عفواً، سلتك فارغة. حاول أضافة بعض المنتجات",
+    "GO_TO_LIST": "أذهب للقائمة",
+    "COUNT": "عدد",
+    "ITEMS": "وحدات",
+    "PRODUCTS_PRICE": "جم / إجمالى",
+    "CHECKOUT": "أدفع"
+  },
+  "ACTIONS": {
+    "ADD": "إضافة",
+    "VIEW": "عرض",
+    "EDIT": "تعديل",
+    "DELETE": "حذف",
+    "SAVE": "حفظ",
+    "CANCEL": "إلغاء",
+    "NO_KEEP_IT": "لا أحتفظ به",
+    "CONFIRM": "تأكيد",
+    "DISCARD": "تجاهل",
+    "UPLOAD_IN_PROGRESS": "جارى التحميل..."
+  },
+  "ERROR_PAGES": {
+    "HOME": "الرئيسية",
+    "BACK": "رجوع",
+    "SORRY": "نأسف!",
+    "FORBIDDEN": "بدون صلاحية",
+    "NO_PERMISSION": "ليس لديك صلاحية للوصول لهذة الصفحة، برجاء التواصل مع الشخص المسؤول",
+    "NOT_FOUND": "صفحة خطأ",
+    "WE_HELP": "الصفحة التى تبحث عنها غير موجودة",
+    "SERVER_ERROR": "مشكلة فى محرك العمليات",
+    "WRONG_SERVER": "برجاء المحاولة فى وقط لاحق",
+    "TRY_AGAIN": "حاول مجدداً"
+  },
+  "VALIDATION_MESSAGES": {
+    "LOGIN": {
+      "USERNAME_REQUIRED": "أسم المستخدم مطلوب",
+      "USERNAME_NOT_VALID": "من فضلك أكتب أسم مستخدم صحيح",
+      "PASSWORD_REQUIRED": "كلمة المرور مطلوبة",
+      "PASSWORD_NOT_VALID": "من فضلك أكتب كلمة المرور صحيحة"
+    },
+    "PRODUCT": {
+      "NAME_EN": "من فضلك أكتب أسم المنتج الأنجليزى",
+      "NAME_AR": "من فضلك أكتب أسم المنتج العربى",
+      "DESCRIPTION_EN": "من فضلك أكتب وصف المنتج الأنجليزى",
+      "DESCRIPTION_AR": "من فضلك أكتب وصف المنتج العربى",
+      "CODE": "من فضلك أكتب كود المنتج",
+      "PRICE": "من فضلك أدخل سعر المنتج",
+      "QUANTITY": "من فضلك أدخل كمية المنتج",
+      "IMAGE": "من فضلك قم بتحميل صورة المنتج",
+      "ENGLISH_ONLY": "مسموح بحروف أنجليزية فقط",
+      "ARABIC_ONLY": "مسموح بحروف عربية فقط",
+      "CODE_INVALID": "من فضلك أكتب من 5 الى 15 حرف",
+      "PRICE_INVALID": "من فضلك أدخل ما بين 50 و 300",
+      "QUANTITY_INVALID": "من فضلك أدخل ما بين 1 و 50"
+    }
+  },
+  "TOASTER": {
+    "INFO": "للمعلومية",
+    "SUCCESS": "تم بنجاح",
+    "WARNING": "تنبية",
+    "ERROR": "خطأ",
+    "INFO_MESSAGE": "فقط للمعلومية",
+    "SUCCESS_MESSAGE": "تمت العملية",
+    "WARNING_MESSAGE": "تنبية بشأن عمليتك",
+    "ERROR_MESSAGE": "حدثت مشكلة أثناء إتمام عمليتك",
+    "SERVER_ERROR": "مشكلة فى الخادم، حاول فى وقت لاحق",
+    "LOGIN": {
+      "VALID": "لقد تم تسجيل الدخول",
+      "INVALID": "خطأ فى أسم المستخدم أو كلمة المرور"
+    },
+    "ADMIN": {
+      "ADD_SUCCESS": "تم أضافة المنتج",
+      "EDIT_SUCCESS": "تم تحديث المنتج",
+      "DELETE_SUCCESS": "تم حذف المنتج"
+    },
+    "CART": {
+      "CHECKOUT": "شكراً لتسوقك معنا"
+    }
+  }
+}

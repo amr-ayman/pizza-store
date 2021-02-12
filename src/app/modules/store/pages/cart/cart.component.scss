@@ -1,0 +1,28 @@
+@import "styles/app";
+/* Store Cart Styles Start Here */
+.cart-page {
+  .no-items {
+    .go-to-list {
+      margin-top: 40px;
+    }
+  }
+  .cart-items {
+    .product {
+      margin-top: 50px;
+      background-color: $border;
+      .product-details {
+        padding: 20px 15px 15px;
+        .product-title {
+          margin-bottom: 30px;
+          font-weight: 700;
+        }
+        .product-content {
+          font-size: 1.2rem;
+        }
+      }
+    }
+    .checkout {
+      margin-top: 40px;
+    }
+  }
+}

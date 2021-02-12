@@ -1,0 +1,12 @@
+<div class="form-group" setRtl>
+  <label *ngIf="label" class="form-control-label" [for]="formControlName">{{ label | translate}}</label>
+  <input [id]="formControlName" class="form-control inputNumber" type="number" [min]="min" [max]="max"
+         [placeholder]="placeholder | translate" [(ngModel)]="value"
+         (input)="setSelectedNumber($event.target.value)" (blur)="onTouched($event)" [disabled]="disabled"
+         [class.has-error]="(formControl.touched || formControl.dirty) && !formControl.valid">
+  <div class="error-message" *ngIf="(formControl.touched || formControl.dirty) && !formControl.valid">
+    <span class="message" *ngIf="formControl.errors?.required">{{errorMessages[formControlName].required | translate}}</span>
+    <span class="message" *ngIf="formControl.errors?.min">{{errorMessages[formControlName].min | translate}}</span>
+    <span class="message" *ngIf="formControl.errors?.max">{{errorMessages[formControlName].max | translate}}</span>
+  </div>
+</div>

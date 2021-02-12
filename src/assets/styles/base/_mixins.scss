@@ -1,0 +1,33 @@
+/* Pizza Store Screen Sizes */
+
+// Small Screens
+@mixin small-screen {
+  @media only screen and (min-width: 576px) {
+    @content;
+  }
+}
+// Medium Screens
+@mixin medium-screen {
+  @media only screen and (min-width: 768px) {
+    @content;
+  }
+}
+// Normal Screens
+@mixin normal-screen {
+  @media only screen and (min-width: 992px) {
+    @content;
+  }
+}
+// Large Screens
+@mixin large-screen {
+  @media only screen and (min-width: 1200px) {
+    @content;
+  }
+}
+
+// Extra Large Screens
+@mixin xlarge-screen {
+  @media only screen and (min-width: 1680px) {
+    @content;
+  }
+}

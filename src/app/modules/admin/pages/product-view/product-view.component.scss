@@ -1,0 +1,30 @@
+@import "styles/app";
+/* Admin Product Page Styles Start Here */
+.store-page {
+  .product-view {
+    .product-description {
+      margin: 30px 0 20px;
+      font-size: 1.5rem;
+    }
+    .product-quantity {
+      margin: 10px 0;
+    }
+    .back-to-list {
+      margin-top: 40px;
+    }
+  }
+  .create-product {
+    .new-product {
+      margin-bottom: 50px;
+    }
+    .product-form {
+      .form-actions {
+        width: 90%;
+        max-width: 200px;
+        margin: 40px auto 0;
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+  }
+}

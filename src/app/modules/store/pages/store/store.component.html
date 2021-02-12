@@ -1,0 +1,27 @@
+<div class="store-page" setRtl>
+  <h2 class="product-list-title">{{'STORE.TITLE' | translate}}</h2>
+  <div class="product-list" *ngIf="products.length">
+    <div class="row">
+      <ng-container *ngFor="let product of products">
+        <div class="col-sm-12 col-md-6 col-lg-4">
+          <div class="product">
+            <div class="product-image">
+              <img [src]="product.image" [alt]="product.name" class="img-fluid">
+            </div>
+            <div class="product-details">
+              <h3 class="product-title">{{product.name}}</h3>
+              <p class="product-content">{{'ADMIN.ITEM.PRODUCT_CODE' | translate}}: {{product.code}}</p>
+              <p class="product-content" *ngIf="product.quantity">{{product.quantity}} {{'ADMIN.ITEM.PRODUCT_QUANTITY' | translate}}</p>
+              <p class="product-content" *ngIf="!product.quantity">{{'STORE.NOT_AVAILABLE' | translate}}</p>
+              <p class="product-content">{{product.price}} {{'ADMIN.ITEM.PRODUCT_PRICE' | translate}}</p>
+            </div>
+            <div class="product-actions">
+              <span class="action add" (click)="addToCart(product)"><i class="ps-cart-add icon"></i></span>
+              <span class="action remove" (click)="removeFromCart(product)"><i class="ps-cart-minus icon"></i></span>
+            </div>
+          </div>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+</div>

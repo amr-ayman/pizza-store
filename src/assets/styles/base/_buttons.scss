@@ -1,0 +1,64 @@
+/* Pizza Store Colors */
+@import "variables";
+/* Pizza Store Mixins */
+@import "mixins";
+/* Pizza Store Button Styles Start Here */
+.pizza-btn {
+  padding: 10px 15px;
+  color: $layout-light;
+  display: inline-block;
+  text-align: center;
+  font-size: 1.2rem;
+  font-family: $primary-font;
+  border-radius: 3px;
+  border: 1px solid transparent;
+  transition: all 0.3s ease-in-out;
+  &:hover {
+    cursor: pointer;
+    text-decoration: none;
+  }
+  &:focus {
+    outline: none;
+  }
+  &.apply {
+    background-color: $highlight;
+    &:hover {
+      background-color: darken($highlight, 10%);
+    }
+  }
+  &.accept {
+    background-color: darken($primary, 10%);
+    &:hover {
+      background-color: darken($primary, 30%);
+    }
+  }
+  &.submit {
+    background-color: darken($success, 10%);
+    &:hover {
+      background-color: darken($success, 30%);
+    }
+  }
+  &.outline {
+    color: $layout-dark;
+    background-color: transparent;
+    border-color: $layout-dark;
+    &:hover {
+      color: $layout-light;
+      border-color: darken($primary, 30%);
+      background-color: darken($primary, 30%);
+    }
+  }
+  &.large {
+    width: 100%;
+  }
+  &.medium {
+    padding: 25px;
+    @include xlarge-screen {
+      padding: 15px 45px;
+    }
+  }
+  &.small {
+    width: fit-content;
+    display: table; // For IE
+  }
+}

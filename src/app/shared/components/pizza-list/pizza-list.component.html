@@ -1,0 +1,99 @@
+<ngx-datatable class="large-table admin" [rows]="rows" [columnMode]="'force'" (activate)="rowDetails($event)" [rowHeight]="'auto'" setRtl>
+  <ng-container *ngFor="let column of columns; let i = index">
+    <ngx-datatable-column *ngIf="column.display"
+      [name]="prefix + column.name | translate" [prop]="column.prop" [resizeable]="false" [draggable]="false" [sortable]="false"
+      [maxWidth]="column.size" [headerClass]="(column.type === 'options') || (column.type === 'edit') ? 'options' : ''">
+      <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
+        <!-- Start Of List -->
+        <ng-container *ngIf="column.type === 'image'">
+          <div class="photo-wrapper">
+            <img [src]="value" [alt]="row.name" class="photo w-100 h-100">
+          </div>
+        </ng-container>
+        <ng-container *ngIf="column.type === 'text'">
+          <div class="title">{{value}}</div>
+        </ng-container>
+        <ng-container *ngIf="column.type === 'description'">
+          <div class="snippet message">{{value}}</div>
+        </ng-container>
+        <ng-container *ngIf="column.type === 'code'">
+          <div class="snippet message">{{value}}</div>
+        </ng-container>
+        <ng-container *ngIf="column.type === 'number'">
+          <div class="snippet message">{{value}}</div>
+        </ng-container>
+        <!-- List Options -->
+        <ng-container *ngIf="column.type === 'options'">
+          <span class="action" *ngIf="listType === 'admin'">
+            <span class="icon view" (click)="doAction('view')">
+              <i class="ps-show" placement="top" [ngbTooltip]="'ACTIONS.VIEW' | translate"></i>
+            </span>
+           </span>
+          <span class="action" *ngIf="listType === 'admin'">
+            <span class="icon delete" (click)="doAction('delete')">
+              <i class="ps-delete" placement="top" [ngbTooltip]="'ACTIONS.DELETE' | translate"></i>
+            </span>
+           </span>
+        </ng-container>
+      </ng-template>
+    </ngx-datatable-column>
+  </ng-container>
+</ngx-datatable>
+
+<ngx-datatable #list class="small-table admin" [rows]="rows" [columnMode]="'force'" setRtl (activate)="rowDetails($event)" [rowHeight]="'auto'">
+  <ng-container *ngFor="let column of smallColumns">
+    <ngx-datatable-column *ngIf="column.display" [sortable]="column.sortable" [name]="prefix + column.name | translate"
+      [resizeable]="false" [draggable]="false" [prop]="column.prop" [maxWidth]="column.size" [headerClass]="column.type === 'options' ? 'options' : ''">
+      <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
+
+        <!-- Start Of News List -->
+        <ng-container *ngIf="column.type === 'image'">
+          <div class="photo-wrapper">
+            <img [src]="row.thumbnail" [alt]="row.title" class="photo">
+          </div>
+        </ng-container>
+        <ng-container *ngIf="column.type === 'title'">
+          <div class="title" [class.request-id]="row.requestId">{{value ? value : 'VALIDATION_MESSAGES.ADMIN.NO_DATA' | translate}}</div>
+        </ng-container>
+        <ng-container *ngIf="column.type === 'description'">
+          <div class="snippet">{{value}}</div>
+        </ng-container>
+        <!-- Common In All Lists -->
+        <ng-container *ngIf="column.type === 'options'">
+          <span class="jsr-pin" *ngIf="row.isFeatured"></span>
+          <div class="actions" *ngIf="['services', 'users'].indexOf(listType) === -1">
+            <div ngbDropdown>
+              <i class="jsr-more" id="dropdownOptions2" ngbDropdownToggle></i>
+              <div ngbDropdownMenu aria-labelledby="dropdownOptions2">
+                <button *ngIf="['announcements', 'requests'].indexOf(listType) === -1" ngbDropdownItem
+                  (click)="doAction('viewEdit')">{{'ACTIONS.VIEW_EDIT' | translate}}</button>
+                <button *ngIf="listType === 'announcements' && listType !== 'requests'" ngbDropdownItem
+                  (click)="doAction('view')">{{'ACTIONS.VIEW' | translate}}</button>
+                <button *ngIf="['announcements', 'requests','applications','documents'].indexOf(listType) === -1"
+                  ngbDropdownItem (click)="doAction('pin')">{{'ACTIONS.PIN' | translate}}</button>
+                <button *ngIf="['announcements', 'requests'].indexOf(listType) === -1" class="delete" ngbDropdownItem
+                  (click)="doAction('delete')">{{'ACTIONS.DELETE' | translate}}</button>
+                <button *ngIf="listType === 'requests' && row.status === 'pending'" ngbDropdownItem
+                  (click)="doAction('reminder')">{{'ACTIONS.SEND_REMINDER' | translate}}</button>
+                <button *ngIf="listType === 'requests' && row.status === 'completed'" ngbDropdownItem
+                  (click)="doAction('pdf')">{{'ACTIONS.SEND_PDF' | translate}}</button>
+              </div>
+            </div>
+          </div>
+        </ng-container>
+      </ng-template>
+    </ngx-datatable-column>
+  </ng-container>
+  <ngx-datatable-row-detail [rowHeight]="'auto'">
+    <ng-template let-row="row" let-value="value" let-expanded="expanded" ngx-datatable-row-detail-template>
+      <div class="expand">
+        <div class="column snippet" *ngIf="row.summary || row.description">
+          <span class="title">{{prefix + 'DESCRIPTIONS' | translate}}</span>
+          <span *ngIf="row.summary" class="content snippet">{{row.summary}}</span>
+          <span *ngIf="row.description" class="content snippet">{{row.description}}</span>
+        </div>
+        <!-- Common In All Lists -->
+      </div>
+    </ng-template>
+  </ngx-datatable-row-detail>
+</ngx-datatable>

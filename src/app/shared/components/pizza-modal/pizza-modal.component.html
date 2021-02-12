@@ -1,0 +1,14 @@
+<div class="modal-header">
+  <div class="header-wrapper">
+    <h4 class="modal-title">{{title | translate}}</h4>
+    <span class="modal-close icon hsc-close" (click)="modal.dismissAll()"></span>
+  </div>
+</div>
+<div class="modal-body">
+  <ng-content *ngTemplateOutlet="template"></ng-content>
+</div>
+<div class="modal-footer" *ngIf="buttons?.length">
+  <div class="confirmation-wrapper">
+    <button type="button" class="pizza-btn small" *ngFor="let button of buttons" [class.apply]="button.id === 1" [class.accept]="button.id === 2" (click)="confirm(button.id)">{{button.text | translate}}</button>
+  </div>
+</div>

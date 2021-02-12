@@ -1,0 +1,31 @@
+<header setRtl>
+  <nav class="navbar navbar-expand-sm">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="javascript:" routerLink="/store">
+        <img src="assets/images/brand/pizza-store-logo.png" alt="Pizza Store Logo" class="img-fluid">
+      </a>
+      <button class="navbar-toggler" type="button" (click)="showMenu = !showMenu">
+        <span class="navbar-toggler-icon"><i class="ps-menu icon"></i></span>
+      </button>
+      <div class="collapse navbar-collapse" [class.show]="showMenu">
+        <ul class="navbar-nav" (click)="showMenu = !showMenu">
+          <ng-container *ngFor="let item of menuItems">
+            <li class="nav-item" [secured]="item.permissions">
+              <a class="nav-link" href="javascript:" routerLinkActive="active" routerLink="{{'/' + item.routerLink}}">{{'MENU.' + item.title | translate}}</a>
+            </li>
+          </ng-container>
+          <li class="nav-item">
+            <a class="nav-link" href="javascript:" (click)="changeLang()">{{'HEADER_FOOTER.LANG' | translate}}</a>
+          </li>
+        </ul>
+        <a class="cart" href="javascript:" routerLink="/store/cart">
+          <i class="ps-cart icon" [attr.data-number]="itemsInCart"></i>
+        </a>
+        <p class="greeting">{{'HEADER_FOOTER.WELCOME' | translate}} <span class="username">{{userType === 'Admin' ? ('MENU.ADMIN' | translate) : ('MENU.CUSTOMER' | translate)}}</span></p>
+        <a class="logout" href="javascript:" (click)="logout()">
+          <i class="ps-logout icon"></i>{{'HEADER_FOOTER.LOGOUT' | translate}}
+        </a>
+      </div>
+    </div>
+  </nav>
+</header>

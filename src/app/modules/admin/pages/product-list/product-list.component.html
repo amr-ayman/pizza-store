@@ -1,0 +1,10 @@
+<div class="store-page" setRtl>
+  <h2 class="product-list-title">{{'ADMIN.LIST.TITLE' | translate}}</h2>
+  <a href="javascript:" class="pizza-btn small apply add-new" routerLink="/admin/products/add">{{'ADMIN.LIST.ADD_PRODUCT' | translate}}</a>
+  <pizza-store-list *ngIf="rows?.length" [rows]="rows" [columns]="columns" [smallColumns]="smallColumns" [listType]="'admin'" (itemAction)="deleteProduct($event)"></pizza-store-list>
+</div>
+<ng-template #deleteModal>
+  <div class="d-flex align-items-center" setRtl>
+    <span class="px-2">{{ 'ADMIN.LIST.DELETE_CONFIRMATION' | translate }}</span>
+  </div>
+</ng-template>

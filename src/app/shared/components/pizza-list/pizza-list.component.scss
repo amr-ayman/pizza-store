@@ -1,0 +1,394 @@
+@import "styles/app";
+.ngx-datatable {
+  z-index: 10;
+  &.admin {
+    overflow: unset !important;
+    &.large-table {
+      display: none;
+      @include normal-screen {
+        display: block;
+      }
+    }
+    &.small-table {
+      @include normal-screen {
+        display: none;
+      }
+    }
+    .datatable-header {
+      min-width: 100%;
+      max-width: 100%;
+      .datatable-header-inner {
+        min-width: 100%;
+        max-width: 100%;
+        padding: 0 10px;
+        @include large-screen {
+          padding: 0 30px;
+        }
+        .datatable-row-center {
+          min-width: 100%;
+          max-width: 100%;
+          justify-content: space-between;
+          .datatable-header-cell {
+            position: relative;
+            font-size: 14px;
+            .datatable-header-cell-wrapper {
+              position: relative;
+            }
+            color: $highlight;
+            &.options {
+              visibility: hidden;
+            }
+            @include large-screen {
+              font-size: 14px;
+            }
+            &:not(.sortable) {
+              cursor: context-menu;
+            }
+          }
+        }
+      }
+    }
+    .datatable-body {
+      min-width: 100%;
+      max-width: 100%;
+      .datatable-scroll {
+        min-width: 100%;
+        max-width: 100%;
+        .datatable-row-wrapper {
+          cursor: default;
+          margin: 15px 0;
+          border-radius: 8px;
+          background-color: $border;
+          .datatable-body-row {
+            min-width: 100%;
+            max-width: 100%;
+            > div {
+              max-width: 100%;
+            }
+            .datatable-row-center {
+              padding: 10px;
+              min-width: 100%;
+              justify-content: space-between;
+              cursor: default;
+              align-items: center;
+              .datatable-body-cell {
+                overflow-x: visible;
+                .datatable-body-cell-label {
+                  width: 100%;
+                  height: 100%;
+                  font-size: 14px;
+                  font-weight: 700;
+                  color: $gray-dark;
+                  display: flex;
+                  align-items: center;
+                  @include large-screen {
+                    //font-size: 16px;
+                    font-size: 14px;
+                  }
+                  .photo-wrapper {
+                    width: 70px;
+                    max-width: 70px;
+                    height: 48px;
+                    max-height: 48px;
+                    .photo {
+                      width: 100%;
+                      max-width: 100%;
+                      height: 100%;
+                      border-radius: 8px;
+                    }
+                    .img-fluid {
+                      height: 35px;
+                      border-radius: 50%;
+                    }
+                  }
+                  .name {
+                    max-width: 160px;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    -webkit-line-clamp: 2;
+                    -webkit-box-orient: vertical;
+                  }
+                  .title {
+                    max-width: 100px;
+                    overflow: hidden;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 2;
+                    -webkit-box-orient: vertical;
+                    @include normal-screen {
+                      max-width: 200px;
+                    }
+                    &.request-id {
+                      max-width: 100%;
+                    }
+                  }
+                  .snippet {
+                    width: 200px;
+                    overflow: hidden;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 2;
+                    -webkit-box-orient: vertical;
+                    &.message {
+                      width: 400px;
+                    }
+                  }
+                }
+                &:last-child {
+                  .datatable-body-cell-label {
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    position: relative;
+                    top: 5px;
+                    .action {
+                      color: $highlight;
+                      margin-left: 5px;
+                      font-size: 18px;
+                      &:hover {
+                        cursor: pointer;
+                      }
+                      .icon {
+                        &.view {
+                          color: $primary;
+                        }
+                        &.delete {
+                          color: $error;
+                        }
+                      }
+                    }
+                    @include normal-screen {
+                      width: 85%;
+                    }
+                    .service-list {
+                      position: relative;
+                      left: -30px;
+                    }
+                  }
+                }
+              }
+              @include large-screen {
+                padding: 10px 30px;
+              }
+            }
+          }
+          .datatable-row-detail {
+            .expand {
+              padding: 0 20px 20px;
+              .column {
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 15px;
+
+                .title {
+                  color: $gray-light;
+                  margin-bottom: 10px;
+                }
+                .content {
+                  display: flex;
+                  .media-container {
+                    width: 100px;
+                    justify-content: space-between;
+                    .media-wrapper {
+                      display: flex;
+                      align-items: center;
+                      max-width: 70px;
+                      .icon {
+                        width: 40px;
+                        height: 40px;
+                        position: relative;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        border-radius: 50%;
+                        color: $primary;
+                        border: 1px solid $primary;
+                        &:after {
+                          content: attr(data-number);
+                          width: 20px;
+                          height: 20px;
+                          display: flex;
+                          font-size: 10px;
+                          color: $layout-light;
+                          align-items: center;
+                          justify-content: center;
+                          border-radius: 50%;
+                          background-color: $primary;
+                          position: absolute;
+                          bottom: -5px;
+                          right: -7px;
+                        }
+                        &.no-data {
+                          color: $border;
+                          border-color: $border;
+
+                          &:after {
+                            background-color: $disabled;
+                          }
+                        }
+                      }
+                    }
+                  }
+                  &.snippet {
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 2;
+                    -webkit-box-orient: vertical;
+                    &.link {
+                      color: $primary;
+                    }
+                  }
+                  .person {
+                    align-items: center;
+                    .photo-wrapper {
+                      margin-right: 10px;
+                      .photo {
+                        width: 40px;
+                        height: 40px;
+                        min-width: 40px;
+                        max-width: 40px;
+                        min-height: 40px;
+                        max-height: 40px;
+                        border-radius: 50%;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+          &:hover {
+            cursor: pointer;
+            @include medium-screen {
+              box-shadow: 1px 1px 10px 2px rgba($layout-dark, 0.15);
+            }
+          }
+        }
+      }
+    }
+    /* Table ArabicStyles Start Here */
+    &.rtl {
+      .datatable-header {
+        .datatable-header-inner {
+          .datatable-row-center {
+            .datatable-header-cell {
+              .sort-btn {
+                left: auto;
+                right: 0;
+                &::after {
+                  right: auto;
+                  left: -20px;
+                }
+              }
+              .datatable-header-cell-wrapper {
+                &::after {
+                  right: auto;
+                  left: -20px;
+                }
+              }
+            }
+          }
+        }
+      }
+      .datatable-body {
+        .datatable-scroll {
+          .datatable-row-wrapper {
+            .datatable-body-row {
+              .datatable-row-center {
+                .datatable-body-cell {
+                  .media-container {
+                    .media-wrapper {
+                      .icon {
+                        &:after {
+                          right: auto;
+                          left: -7px;
+                        }
+                        &.no-data {
+                          color: $border;
+                          border-color: $border;
+                          &:after {
+                            background-color: $disabled;
+                          }
+                        }
+                      }
+                    }
+                  }
+                  &:last-child {
+                    .datatable-body-cell-label {
+                      .jsr-pin {
+                        right: auto;
+                        left: 80px;
+                        @include medium-screen {
+                          left: 90px;
+                        }
+                        @include normal-screen {
+                          top: 15px;
+                          left: 48px;
+                        }
+                        @include large-screen {
+                          left: 65px;
+                        }
+                      }
+                      .actions {
+                        @include normal-screen {
+                          margin-left: 0;
+                          margin-right: 5px;
+                        }
+                        .dropdown-menu {
+                          .dropdown-item {
+                            text-align: right;
+                          }
+                        }
+                      }
+                      .collapse-icons {
+                        margin-left: 0;
+                        margin-right: 10px;
+                        @include normal-screen {
+                          display: none;
+                        }
+                      }
+                      .service-list {
+                        left: auto;
+                        right: -30px;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+            .datatable-row-detail {
+              .expand {
+                .snippet, .date {
+                  .content {
+                    .date {
+                      margin-right: 0;
+                      margin-left: 10px;
+                    }
+                    .roles {
+                      .first-role {
+                        margin-right: 0;
+                        margin-left: 10px;
+                      }
+                      .roles-number {
+                        direction: ltr;
+                        padding-left: 0;
+                        padding-right: 10px;
+                        justify-content: flex-end;
+                        &:after {
+                          content: '\e929';
+                          right: auto;
+                          left: 10px;
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
